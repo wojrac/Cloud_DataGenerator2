@@ -35,7 +35,10 @@ namespace CloudBackend1
             {
                 app.UseDeveloperExceptionPage();
             }
-
+               app.UseCors(x => x   //dodac do drugiego backu
+            .AllowAnyOrigin()      //
+            .AllowAnyMethod()      //
+            .AllowAnyHeader());
             app.UseHttpsRedirection();
 
             app.UseRouting();
